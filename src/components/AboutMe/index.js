@@ -11,7 +11,7 @@ function AboutMe() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           quis impedit autem, officiis reprehenderit aliquid dolorem eveniet
           voluptatum hic asperiores! Quidem veniam consectetur aliquam, porro
-          quasi sed modi cumque vitae?
+          quasi sed modi cumque vitae? so no what !
         </p>
         <button className="btn about-btn">Download Resume</button>
       </div>
