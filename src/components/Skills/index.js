@@ -1,6 +1,8 @@
 import "./skill.css";
 
 function Skills() {
+  const SkillList = ["javaScript", "java", "python", "nodeJs", "react"];
+
   return (
     <>
       <section className="bg-light py-5 py-xl-6">
@@ -17,93 +19,32 @@ function Skills() {
             </div>
           </div>
         </div>
-        <div className="container overflow-hidden">
-          <div className="row justify-content-xl-center gy-3 gy-sm-4">
-            <div className="col-12 col-sm-6 col-xl-5">
-              <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
-                <h3 className="fw-bold mb-2">Bootstrap</h3>
-                <p className="text-secondary fst-italic mb-4">
-                  Nullam felis turpis, commodo id fermentum eget, semper vel
-                  odio.
-                </p>
-                <div className="progress">
-                  <div
-                    className="progress-bar w-85 progress-bar-striped progress-bar-animated"
-                    role="progressbar"
-                    aria-label="Bootstrap"
-                    aria-valuenow={85}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  >
-                    85%
+        <div>
+          <ul className="row justify-content-xl-center gy-3 gy-sm-4">
+            {SkillList.map((skill) => (
+              <div className="col-12 col-sm-6 col-xl-5">
+                <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
+                  <h3 className="fw-bold mb-2">{skill}</h3>
+                  <p className="text-secondary fst-italic mb-4">
+                    Nullam felis turpis, commodo id fermentum eget, semper vel
+                    odio.
+                  </p>
+                  <div className="progress">
+                    <div
+                      className="progress-bar w-85 progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      aria-label="Bootstrap"
+                      aria-valuenow={85}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                    >
+                      85%
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-12 col-sm-6 col-xl-5">
-              <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
-                <h3 className="fw-bold mb-2">React</h3>
-                <p className="text-secondary fst-italic mb-4">
-                  Nullam felis turpis, commodo id fermentum eget, semper vel
-                  odio.
-                </p>
-                <div className="progress">
-                  <div
-                    className="progress-bar w-75 progress-bar-striped progress-bar-animated"
-                    role="progressbar"
-                    aria-label="React"
-                    aria-valuenow={75}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  >
-                    75%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-xl-5">
-              <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
-                <h3 className="fw-bold mb-2">Vue</h3>
-                <p className="text-secondary fst-italic mb-4">
-                  Nullam felis turpis, commodo id fermentum eget, semper vel
-                  odio.
-                </p>
-                <div className="progress">
-                  <div
-                    className="progress-bar w-65 progress-bar-striped progress-bar-animated"
-                    role="progressbar"
-                    aria-label="Vue"
-                    aria-valuenow={65}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  >
-                    65%
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-xl-5">
-              <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
-                <h3 className="fw-bold mb-2">WordPress</h3>
-                <p className="text-secondary fst-italic mb-4">
-                  Nullam felis turpis, commodo id fermentum eget, semper vel
-                  odio.
-                </p>
-                <div className="progress">
-                  <div
-                    className="progress-bar w-95 progress-bar-striped progress-bar-animated"
-                    role="progressbar"
-                    aria-label="WordPress"
-                    aria-valuenow={95}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  >
-                    95%
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            ))}
+          </ul>
         </div>
       </section>
     </>
