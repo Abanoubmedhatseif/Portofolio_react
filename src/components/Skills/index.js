@@ -1,7 +1,53 @@
 import "./skill.css";
 
 function Skills() {
-  const SkillList = ["javaScript", "java", "python", "nodeJs", "react"];
+  const SkillList = [
+    {
+      title: "JavaScript",
+      progress: 70,
+      description: "Provide description for JavaScript programming language",
+    },
+    {
+      title: "Python",
+      progress: 80,
+      description: "Provide description for Python programming language",
+    },
+    {
+      title: "Java",
+      progress: 65,
+      description: "Provide description for Java programming language",
+    },
+    {
+      title: "C++",
+      progress: 60,
+      description: "Provide description for C++ programming language",
+    },
+    {
+      title: "HTML",
+      progress: 85,
+      description: "Provide description for HTML programming language",
+    },
+    {
+      title: "CSS",
+      progress: 75,
+      description: "Provide description for CSS programming language",
+    },
+    {
+      title: "Ruby",
+      progress: 55,
+      description: "Provide description for Ruby programming language",
+    },
+    {
+      title: "Swift",
+      progress: 45,
+      description: "Provide description for Swift programming language",
+    },
+    {
+      title: "SQL",
+      progress: 70,
+      description: "Provide description for SQL programming language",
+    },
+  ];
 
   return (
     <>
@@ -21,26 +67,15 @@ function Skills() {
         </div>
         <div>
           <ul className="row justify-content-xl-center gy-3 gy-sm-4">
+            {/* Rendering Data from the array */}
             {SkillList.map((skill) => (
               <div className="col-12 col-sm-6 col-xl-5">
                 <div className="bg-white rounded shadow-sm p-3 p-md-4 p-xxl-5">
-                  <h3 className="fw-bold mb-2">{skill}</h3>
+                  <h3 className="fw-bold mb-2">{skill.title}</h3>
+                  <h3 className="fw-bold mb-2">{skill.progress} %</h3>
                   <p className="text-secondary fst-italic mb-4">
-                    Nullam felis turpis, commodo id fermentum eget, semper vel
-                    odio.
+                    {skill.description}
                   </p>
-                  <div className="progress">
-                    <div
-                      className="progress-bar w-85 progress-bar-striped progress-bar-animated"
-                      role="progressbar"
-                      aria-label="Bootstrap"
-                      aria-valuenow={85}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    >
-                      85%
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
